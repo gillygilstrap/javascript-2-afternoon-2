@@ -296,16 +296,17 @@ function longer(arr1,arr2) {
 */
 
 function both(arr1,arr2) {
-  newArray = [];
-  for ( let i=0;i<arr1.length;i++) {
-    let testNum = arr[i]; 
-    for (let i=0;i<arr2.length;i++) {
-      if (testNum == arr2[i]) {
-        newArray.push(testNum);
+  let newArray = []
+  for (let i = 0; i <arr1.length; i++) {
+    if (arr2.includes(arr1[i])){
+     
+        newArray.push(arr1[i])
       }
+      
     }
-  } return newArray;
-}
+    // console.log('newArray', newArray) 
+  return newArray;
+  } 
 
 
 
@@ -345,7 +346,12 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+
+
+ devMountainEmployees.push(tyler,cahlan,ryan,colt)
+
+  
+  console.log('devempl', devMountainEmployees)
 
 
 
@@ -353,11 +359,15 @@ var colt = {
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
-
-//Code Here
-
-
-
+function cahlanRemover() {
+for (let i = 0; i < devMountainEmployees.length; i++) {
+if (devMountainEmployees[i].name === 'Cahlan')
+  devMountainEmployees.splice(i,1)
+ 
+}
+return devMountainEmployees;
+}
+cahlanRemover()
 ////////// PROBLEM 13 //////////
 
 
@@ -366,7 +376,8 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = [];
+
 
 
 
@@ -385,9 +396,27 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+var user2 = {
+  name: 'Matt Gilstrap',
+  email: 'mattgilstrap@gmail.com',
+  password: '123456',
+  username: 'gillygilstrap'
+};
+var user3 = {
+  name: 'Dan Thomas',
+  email: 'danthomas@gmail.com',
+  password: '54321',
+  username: 'dtallday'
+};
+var user4 = {
+  name: 'Ethan Travis',
+  email: 'ethantravis@gmail.com',
+  password: '9999998',
+  username: 'etravneesey'
+};
 
-
+users.push(user1,user2,user3,user4)
+console.log(users)
 
 /*
   Now you have a very common data structure. 
@@ -399,7 +428,10 @@ var user1 = {
   Once you find the particular index he's located in, delete him from the array.
 */
 
-//Code Here
+for (let i = 0; i < users.length; i++) {
+  if (users[i].name === 'Tyler McGinnis') 
+  users.splice(i,1)
+}
 
 
 
